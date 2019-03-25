@@ -6,7 +6,7 @@ climaFormulario.addEventListener('submit', (event) =>{
     event.preventDefault();
         const searchElement = search.value;
 
-        fetch(`http://localhost:3000/weather?address=${searchElement}`).then((response) => {
+        fetch(`/weather?address=${searchElement}`).then((response) => {
             response.json().then((data) => {
                 if(data.error){
                     return document.getElementById("erro").innerHTML = data.error

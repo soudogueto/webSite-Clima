@@ -1,10 +1,11 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
-const forecast = require('./forecast');
+const forecast = require('./utils/forecast');
 const geoData = require ('./utils/geoData');
 
 const app = express();
+const port = process.env.PORT || 3000
 
 // DEFININDO OS CAMINHOS PARA O EXPRESS
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -82,6 +83,6 @@ app.get('*', (req,res) => {
 })
 
 // DEFININDO AS PORTAS
-app.listen(3000, () =>{
-    console.log('O servidor está rodando na porta 3000')
+app.listen(port, () =>{
+    console.log('O servidor está rodando na porta' + port)
 })

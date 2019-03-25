@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{titleHead}}</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="icon" href="/images/images.png" type="image/jpg"/>
+    </head>
+    <body>
+        <div class="divHead">
+            {{>header}}
+            <div class='search'>
+                <form>
+                    <label>Insira um local</label>
+                    <div class="form">
+                        <input type="text" placeholder="Localização" class="input"/>
+                        <button type="submit" value="Enviar" class="butn">Procurar</button>
+                    </div>
+                </form>
+            </div>
+            <p id='erro'></p>
+            <p id='local'></p>
+            <p id='previsao'></p>
+            <p>Criado pelo {{name}}</p>
+        </div>
+        {{>footer}}
+
+        <script src="/js/app.js"></script>
+    </body>
+</html>

@@ -98,6 +98,8 @@ input {
       font-weight: 600;
   }
   .geral {
+      background: rgb(255,255,255,0.1);
+      width: 30%;
       margin: 6.5em;
       display: flex;
       flex-direction: column;

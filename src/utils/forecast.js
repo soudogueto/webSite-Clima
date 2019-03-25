@@ -11,11 +11,11 @@ const forecast = (latitude, longitude, language, callback) => {
                 callback(data.message, undefined)
             }
         else{
-            const sumario = data.daily.data[0].summary;
+            const sumario = data.daily.summary;
             const temperatura = data.currently.temperature;
             const tempo = data.daily.data[0].precipType;
 
-           return  callback(undefined, `Previsão: ${sumario} Com temperatura de ${temperatura + 'C°'} e tempo ${tempo}`)
+           return  callback(undefined, `Previsão: ${sumario}`)
         }
     })
 }

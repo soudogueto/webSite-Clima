@@ -3,7 +3,7 @@ body {
 }
 
 .divHead {
-    background-image: url("../images/backgroundWeather.jpg");
+    /* background-image: url("../images/backgroundWeather.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     height: -webkit-fill-available;

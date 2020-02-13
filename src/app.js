@@ -9,8 +9,9 @@ const port = process.env.PORT || 3000
 
 // DEFININDO OS CAMINHOS PARA O EXPRESS
 const publicDirectoryPath = path.join(__dirname, '../public')
-const viewsPath = path.join(__dirname, '../modelos/views')
-const partialsPath = path.join(__dirname, '../modelos/partials')
+console.log(__dirname)
+const viewsPath = path.join(__dirname, '../templates/views')
+const partialsPath = path.join(__dirname, '../templates/partials')
 
 // CONFIGURAÇÃO AS LOCALIZAÇÕES DOS VIEWS E HANDLEBARS ENGINE
 app.set('view engine','hbs')
@@ -84,5 +85,5 @@ app.get('*', (req,res) => {
 
 // DEFININDO AS PORTAS
 app.listen(port, () =>{
-    console.log('O servidor está rodando na porta' + port)
+    console.log('O servidor está rodando na porta ' + port)
 })
